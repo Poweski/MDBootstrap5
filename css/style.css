@@ -1,0 +1,107 @@
+body {
+  background: url('https://picsum.photos/1920/1080') center/cover no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+/* Black mask */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.container {
+  z-index: 2;
+}
+
+footer {
+  z-index: 3;
+}
+
+/* FAQ */
+.accordion-button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0056b3;
+  color: white;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Last travels animation */
+.img-hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.img-hover:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.view {
+  position: relative;
+  overflow: hidden;
+}
+
+.view a {
+  display: block;
+  position: relative;
+}
+
+.view .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Image and text section */
+.image-text-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 30px;
+  max-width: 60%;
+}
+
+.image-text-section img {
+  width: 100%;
+  max-width: 40%;
+  border-radius: 8px;
+}
+
+/* Style for quote section */
+.quote-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  text-align: center;
+}
+.quote-section blockquote {
+  font-style: italic;
+  font-size: 1.5em;
+  color: #555;
+  border-left: 5px solid #007bff;
+  padding-left: 20px;
+}
